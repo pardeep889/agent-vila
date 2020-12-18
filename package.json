@@ -1,6 +1,6 @@
 {
   "name": "agent-vila",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package is for getting latest agents via google analytics and randomize it",
   "main": "index.js",
   "scripts": {
@@ -37,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/pardeep889/agent-vila/issues"
   },
-  "homepage": "https://github.com/pardeep889/agent-vila#readme"
+  "homepage": "https://github.com/pardeep889/agent-vila#readme",
+  "dependencies": {
+    "ga-api": "0.0.5"
+  }
 }
