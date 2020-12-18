@@ -1,5 +1,6 @@
 const gaApi = require('ga-api');
 const fs = require('fs');
+const path = require("path");
 
 const accountOptions = {
   email: "test-agent@sage-outrider-290412.iam.gserviceaccount.com",
@@ -22,11 +23,11 @@ gaApi({ ...accountOptions, ...queryOptions }, (error, data) => {
       console.error("error: ", error);
     } else {
         data.rows.forEach((element) => {
-            let content = JSON.parse(fs.readFileSync('file.json', 'utf8'));
+            let content = JSON.parse(fs.readFileSync(path.join(__dirname,'file.json'), 'utf8'));
             // edit or add property
             content[element[1]].push(element[0]);
             //write file
-            fs.writeFileSync('file.json', JSON.stringify(content));
+            fs.writeFileSync(path.join(__dirname,'file.json'), JSON.stringify(content));
         });
     }
 });

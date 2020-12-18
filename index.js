@@ -1,6 +1,6 @@
 const fs = require('fs');
-let content = JSON.parse(fs.readFileSync('file.json', 'utf8'));
-
+const path = require("path");
+let content = JSON.parse(fs.readFileSync(path.join(__dirname,'file.json'), 'utf8'));
 function getRandomUserAgent(device) {
     switch (device) {
       case "desktop":

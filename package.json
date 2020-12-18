@@ -1,6 +1,6 @@
 {
   "name": "agent-vila",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This package is for getting latest agents via google analytics and randomize it",
   "main": "index.js",
   "scripts": {
